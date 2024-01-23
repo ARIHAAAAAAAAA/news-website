@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MiniSourceType {
+  id: ID
+  name: String
+}
+
+type ArticleType {
+  source: MiniSourceType!
+  author: String
+  title: String
+  description: String
+  url: String
+  urlToImage: String
+  publishedAt: String
+  content: String
+}
+
+type Query {
+  articles(country: String!, category: String!): [ArticleType!]!
+  article(id: Int!): ArticleType!
+}
+
+type Mutation {
+  removeArticle(id: Int!): ArticleType!
+}

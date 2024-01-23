@@ -1,0 +1,59 @@
+# version: '3.8'
+# services:
+#   client:
+#     build: ./client
+#     develop:
+#       watch:
+#         - action: rebuild
+#           path: ./client/package.json
+#     restart: always
+#     ports:
+#       - '5173:5173'
+#     links:
+#       - express
+#     volumes:
+#       - ./client/src:/react-vite-app/src
+#     depends_on:
+#       - express
+#   mongo:
+#     restart: always
+#     image: mongo:4.2.0
+#     volumes:
+#       - mongo_data:/data/db  
+#     ports:
+#      - '27017:27017'
+#   cache:
+#     image: redis:6.2-alpine
+#     restart: always
+#     ports:
+#       - '6379:6379'
+#     command: redis-server --save 20 1 --loglevel warning 
+#     volumes: 
+#       - cache:/data   
+#   express:
+#     container_name: express
+#     build: ./server 
+#     develop:
+#       watch:
+#         - action: rebuild
+#           path: ./server/package.json
+#     depends_on:
+#       - cache
+#       - mongo
+#     ports:
+#       - 4500:4500
+#     links:
+#       - cache
+#       - mongo
+#     volumes:
+#       - ./server/src:/app/src
+#     environment:
+#       MONGO_URI: mongodb://mongo:27017/news
+#       REDIS_HOST: cache
+#       REDIS_PORT: 6379
+# volumes:
+#   cache:
+#     driver: local 
+#   mongo_data: 
+#     driver: local
+    
