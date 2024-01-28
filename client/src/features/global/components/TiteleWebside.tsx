@@ -1,14 +1,12 @@
-import React from 'react';
-import {EntranceContainer, WelcomeMessage } from "../style/StyleWebTitle"
-
-
+import { StyledDive } from '../style/divStyle';
+import { H1 } from "../style/hStyle";
 
 
 const NewsEntrance = () => {
   return (
-    <EntranceContainer>
-      <WelcomeMessage> News Website</WelcomeMessage>
-    </EntranceContainer>
+    <StyledDive $padding='40px' height='50px' width='100%'>
+      <H1 color='black'> News Website</H1>
+    </StyledDive>
   );
 };
 

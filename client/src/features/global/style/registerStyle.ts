@@ -22,3 +22,28 @@ export const FormWrapper = styled.div`
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
+export const LogoNotifyR = styled.img`
+  height: 48px;
+  width: 61px;
+  border-radius: 50px;
+  margin: 12px ;
+  color: white;
+`;
+
+
+export const InputBox = styled.textarea<TextInput>`
+height: ${(props)=> props.height};
+width: ${(props)=> props.width};
+margin-top: ${(props)=> props.marginTop};
+padding: ${(props)=> props.padding};
+resize: none;
+font-size: 16px; /* Set your desired font size here */
+padding: 10px;
+`
+type TextInput ={
+  flexDirection?:string
+  height?:string
+  marginTop?:string;
+  padding?:string;
+  width?:string
+}

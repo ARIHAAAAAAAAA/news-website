@@ -1,6 +1,7 @@
 import React from "react";
 import {CardComponent} from "../../components/card"
 import { Article } from "../../types/article"
+import { StyledDive } from "../../style/divStyle";
 
 const sampleData: { articles: Article[] } = {
   articles: [
@@ -61,7 +62,7 @@ const sampleData: { articles: Article[] } = {
 export default function MainHome () {
 
   return (
-    <div style={{border :"1px solid red", display:"flex",flexWrap:"wrap",padding:"50px 0"}}>
+    <StyledDive >
       {sampleData.articles.map((article, index) => (
         <CardComponent 
           key={index}
@@ -71,7 +72,7 @@ export default function MainHome () {
           url={article.url}
         />
       ))} 
-    </div>
+    </StyledDive>
   );
 
 };

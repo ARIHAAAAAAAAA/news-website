@@ -9,6 +9,7 @@ function NavBar() {
     return (
         <>
             <Nav>
+                
                 <Button onClick={() => navigate("/login")}>log in</Button>
                 <Button onClick={() => navigate("/register")}>register</Button>
                 <Button>form</Button>

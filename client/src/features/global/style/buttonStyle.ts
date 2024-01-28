@@ -12,8 +12,8 @@ export const Button = styled.button`
     background-color: lightgray;
     color: black;
   }
-  background-color:${(props) => props.color || "#e1e4e8"};
-    color: white;
+  background-color:white;
+    color: black;
   &:active{
     transform: scale(0.9);
 }

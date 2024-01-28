@@ -1,17 +1,6 @@
 import styled from "styled-components"
 
 
-
-const Title = styled.h1<{fontSize?:string}>`
- font-size: ${(props) => props.fontSize};
-  text-align: center;
-  justify-content: center;
-  color: black;
-  margin-bottom: 8px;
-  color: #333;
-`;
-
-
 const Image = styled.img`
   border-radius: 10px; 
   width:100%;
@@ -31,19 +20,6 @@ const Paragraph = styled.p<{padding?:string}>`
   padding: ${(props)=> props.padding = "100px" };
 `;
 
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 345px;
-  margin: 10px;
-  border: 1px solid #ddd; 
-  border-radius: 10px;
-  width:300px;
-  height:250px ;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-`;
 
 export interface CardProps {
   url: string | undefined;
@@ -52,4 +28,4 @@ export interface CardProps {
   paragraph: string;
 }
 
-export {Card, Paragraph, Image, Title,ImageLink}
+export { Paragraph, Image,ImageLink}

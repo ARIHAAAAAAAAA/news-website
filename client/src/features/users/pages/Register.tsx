@@ -1,7 +1,7 @@
 import { Path, useForm, UseFormRegister, SubmitHandler } from "react-hook-form";
 import { FormWrapper, StyledInput } from "../../global/style/registerStyle";
 import { Button } from "../../global/style/buttonStyle";
-import { Title } from "../../global/style/cardStyle";
+import { H1 } from "../../global/style/hStyle";
 
 interface IFormValues {
   Username: string;
@@ -32,7 +32,7 @@ const Register = () => {
   return (
     <>
 
-    <Title fontSize="3em" >sign up</Title>
+    <H1 fontSize="2em" >sign up</H1>
     <FormWrapper>
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input label="Username" register={register} required />

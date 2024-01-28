@@ -5,7 +5,7 @@ type ButtonProps = {
     disabled?: boolean;
   };
   
-  export const ButtonStyled = styled.button<ButtonProps>`
+  export const ButtonTheme = styled.button<ButtonProps>`
     background-color: ${({ disabled, theme }) => {
       if (disabled) return theme.backgroundColor.secondary;
       return "inherit";
